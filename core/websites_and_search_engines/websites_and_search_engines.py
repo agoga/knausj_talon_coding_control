@@ -29,6 +29,7 @@ website_defaults = {
     "gist": "https://gist.github.com/",
     "wikipedia": "https://en.wikipedia.org/",
     "youtube": "https://www.youtube.com/",
+    "overleaf": "https://www.overleaf.com/",
 }
 
 _search_engine_defaults = {

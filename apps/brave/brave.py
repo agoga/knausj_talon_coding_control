@@ -8,6 +8,10 @@ mod.apps.brave = "app.name: Brave Browser"
 mod.apps.brave = """
 os: mac
 and app.bundle: com.brave.Browser
+os: windows
+and app.name: Brave Browser
+os: windows
+and app.exe: brave.exe
 """
 ctx.matches = r"""
 app: brave

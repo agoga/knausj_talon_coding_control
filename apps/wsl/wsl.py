@@ -15,7 +15,8 @@ ctx = Context()
 # than the context defined in apps/win/windows_terminal/windows_terminal.py (and thereby
 # takes precedence).
 ctx.matches = rf"""
-app: windows_terminal
+
+app: ubuntu2204.exe
 and tag: user.wsl
 tag: user.wsl
 """

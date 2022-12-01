@@ -4,10 +4,11 @@
 # do this in a separate .talon file or via python. for example, if you use windows terminal for
 # wsl then you might do this:
 #
-#    os: windows
-#    app: windows_terminal
-#    -
-#    tag(): user.wsl
+# os: windows
+# app: windows_terminal
+os: windows
+and app.name: ubuntu2204.exe
+
 #
 # however, if you also use windows terminal for other things (powershell), you will want something
 # more specific...like this:
@@ -25,13 +26,23 @@
 #
 # ALSO: if you do populate your window title with your distro name, make sure the 'wsl_title_regex'
 # value in wsl.py is set accordingly.
-tag: user.wsl
--
 
+-
+# makes the commands in generic_terminal available
 tag(): terminal
+
+# activates the implementation of the commands/functions in generic_terminal
+#tag(): user.generic_windows_shell
+
+# makes commands for certain applications available
+# you can deactivate them if you do not use the application
+tag(): user.git
+tag(): user.anaconda
+tag(): user.wsl
+
 tag(): user.file_manager
 tag(): user.generic_unix_shell
-tag(): user.git
+
 tag(): user.kubectl
 
 ^go <user.letter>$: user.file_manager_open_volume("/mnt/{letter}")
